@@ -8,28 +8,10 @@ import { createTheme} from '@mui/material/styles';
 
 function App() {
 
-  // paleta de cores
-  const theme = createTheme({
-    palette: {
-      sage: {
-        main: '#B5C18E',
-      },
-      beige: {
-        main: '#F7DCB9',
-      },
-      tamara: {
-        main: '#DEAC80',
-      },
-      castain: {
-        main: '#B99470',
-      },
-    },
-  });
-
   return (
     <div className="App">
       <header className="App-header">
-        <Toolbar theme = {theme}/>
+        <Toolbar/>
       </header>
       <body className='App-body'>
         <div className='Banner-body'>

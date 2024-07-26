@@ -14,12 +14,43 @@ import ListItemText from '@mui/material/ListItemText';
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import { green } from '@mui/material/colors';
-import { ThemeProvider } from '@mui/material/styles';
+
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 //Css
 import '../styles/Toolbar.css';
 
-const Toolbar = ({theme}) => {
+const Toolbar = () => {
+
+    // paleta de cores
+    const theme = createTheme({
+        palette: {
+          sage: {
+            light: '#757ce8',
+            main: '#B5C18E',
+            dark: '#002884',
+            contrastText: '#fff',
+          },
+          beige: {
+            light: '#ff7961',
+            main: '#F7DCB9',
+            dark: '#ba000d',
+            contrastText: '#000',
+          },
+          tamara: {
+            light: '#ff7961',
+            main: '#DEAC80',
+            dark: '#ba000d',
+            contrastText: '#000',
+          },
+          castain: {
+            light: '#ff7961',
+            main: '#B99470',
+            dark: '#ba000d',
+            contrastText: '#000',
+          },
+        },
+      });
   
 
 // botoes customizados
