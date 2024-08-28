@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Toolbar from './components/Toolbar';
 import Body from './components/Body';
 import ProductCard from './components/ProductCard';
-import PrimarySearchAppBar from  './components/PrimarySearchAppBar';
-import { createTheme} from '@mui/material/styles';
+import BuyPage from './components/BuyPage';
+import { Password } from '@mui/icons-material';
 
 function App() {
 
@@ -19,6 +19,10 @@ function App() {
         </div>
         <div className='New-body'>
           <ProductCard />
+
+        </div>
+        <div >
+          {/* <BuyPage /> */}
         </div>
       </body>
     </div>
