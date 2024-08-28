@@ -96,11 +96,11 @@ const [state2, setState2] = React.useState({right: false});
       <List>
           <ListItem>Item 1</ListItem>
           <ListItem>Item 2</ListItem>
-          <ListItem>Item 3</ListItem>      
+          <ListItem>Item 3</ListItem>
       </List>
-        <Box sx={{ display: 'flex', justifyContent: 'center'}}>
-            <ColorButton variant="contained">Comprar</ColorButton>
-        </Box>
+      <Box sx={{ display: 'flex', justifyContent: 'center'}}>
+          <ColorButton variant="contained">Comprar</ColorButton>
+      </Box>
     </Box>
   );
 
@@ -111,6 +111,10 @@ const [state2, setState2] = React.useState({right: false});
       onClick={toggleDrawer2(key, false)}
       onKeyDown={toggleDrawer2(key, false)}
     >
+      <Box
+      sx={{ fontSize: '22px', textAlign: 'center' ,padding: '10px' }}
+      >Amelier Crochet</Box>
+      <Divider />
       <List>
           <ListItem>Minha Conta</ListItem>
           <ListItem>Meus Pedidos</ListItem>
