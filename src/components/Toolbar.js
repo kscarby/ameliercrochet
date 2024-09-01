@@ -10,11 +10,13 @@ import { styled } from '@mui/material/styles';
 import { green } from '@mui/material/colors';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState, useEffect } from 'react';
 
 //Css
 import '../styles/Toolbar.css';
 
-const Toolbar = () => {
+
+const Toolbar = ({newproducts, amigurumis, babykits, acessories}) => {
 
   // paleta de cores
   const theme = createTheme({
@@ -59,6 +61,11 @@ const Toolbar = () => {
     fontSize: '20px',
   }));
 
+//Search
+
+const [search, setSearch] = useState("");
+const [products, setProducts] = useState([]);
+
 
 //Drawer list
 
@@ -73,12 +80,12 @@ const [state2, setState2] = React.useState({right: false});
     setState({ ...state, [anchor]: open });
   };
 
-  const toggleDrawer2 = (anchor, open) => (event) => {
+  const toggleDrawer2 = (anchor2, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
 
-    setState2({ ...state2, [anchor]: open });
+    setState2({ ...state2, [anchor2]: open });
   };
 
 
@@ -104,12 +111,12 @@ const [state2, setState2] = React.useState({right: false});
     </Box>
   );
 
-  const listMenu = (key) => (
+  const listMenu = (anchor) => (
     <Box
-      sx={{ width: key === 'top' || key === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
-      onClick={toggleDrawer2(key, false)}
-      onKeyDown={toggleDrawer2(key, false)}
+      onClick={toggleDrawer2(anchor, false)}
+      onKeyDown={toggleDrawer2(anchor, false)}
     >
       <Box
       sx={{ fontSize: '22px', textAlign: 'center' ,padding: '10px' }}
@@ -130,18 +137,19 @@ const [state2, setState2] = React.useState({right: false});
     <div className='toolbar-app'>
         <div className='toolbar'>
             <h1 className='toolbar-logo'>Amelier Crochet</h1>
-            <input type='text' placeholder='Pesquisar...' className='toolbar-filter'></input>
+            <input type='text' placeholder='Pesquisar...' className='toolbar-filter'>
+            </input>
             <div className='toolbar-buttons'>
               <div>
-                {['right'].map((key) => (
-                <React.Fragment>
-                    <button className ='toolbar-login'onClick={toggleDrawer2(key, true)}></button>
+                {['right'].map((anchor) => (
+                <React.Fragment key = {1}>
+                    <button className ='toolbar-login'onClick={toggleDrawer2(anchor, true)}></button>
                     <Drawer
-                        anchor={key}
-                        open={state2[key]}
-                        onClose={toggleDrawer2(key, false)}
+                        anchor={anchor}
+                        open={state2[anchor]}
+                        onClose={toggleDrawer2(anchor, false)}
                     >
-                        {listMenu(key)}
+                        {listMenu(anchor)}
                     </Drawer>
                 </React.Fragment>
                 ))}
@@ -151,7 +159,8 @@ const [state2, setState2] = React.useState({right: false});
                 <Badge badgeContent ={6} showZero color="beige">
                   <div>
                     {['right'].map((anchor) => (
-                    <React.Fragment anchor={anchor}>
+                    
+                    <React.Fragment key ={2}>
                         <button className ='toolbar-shopping'onClick={toggleDrawer(anchor, true)}></button>
                         <Drawer
                             anchor={anchor}
@@ -170,10 +179,10 @@ const [state2, setState2] = React.useState({right: false});
         </div>
         <div className='toolbar__'>
             <div className='navbar'>
-                <button className='navbar-news'>Lançamentos</button>
-                <button className='navbar-amigurumis'>Amigurumis</button>
-                <button className='navbar-babys'>Kits para Bebês</button>
-                <button className='navbar-accessories'>Acessórios</button>
+                <button className='navbar-news' onClick={newproducts}>Lançamentos</button>
+                <button className='navbar-amigurumis'onClick={amigurumis}>Amigurumis</button>
+                <button className='navbar-babys'onClick={babykits}>Kits para Bebês</button>
+                <button className='navbar-accessories'onClick={acessories}>Acessórios</button>
             </div>
         </div>
     </div>

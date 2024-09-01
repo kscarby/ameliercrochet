@@ -8,6 +8,11 @@
     font-weight: 400;
     font-style: normal;
 }
+li:hover {
+    color: #B5C18E;
+    cursor: pointer;
+}
+
 
 .toolbar-app {
     width: inherit;
