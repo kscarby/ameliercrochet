@@ -21,8 +21,6 @@ Responsividade: O design se adapta a diferentes tamanhos de tela, proporcionando
 
 1 - Clone o repositório
 
-Code
-
 git clone https://github.com/kscarby/ameliercrochet.git
 
 2 - Navegue até o diretório do projeto:
@@ -46,8 +44,8 @@ Se você deseja contribuir para o projeto, fique à vontade para abrir issues ou
 Para mais informações, entre em contato:
 
 Vanessa Sabrina Costa Bandeira
-sabrina.keito@gmail.com
 [LinkedIn](https://www.linkedin.com/in/vanessa-sabrina/)
+[E-mail](sabrina.keito@gmail.com)
 Obrigado por conferir nosso projeto de e-commerce de amigurumis!
 
 Sinta-se à vontade para personalizar as informações, como o nome do repositório, seu nome e detalhes de contato.
