@@ -19,9 +19,11 @@ Responsividade: O design se adapta a diferentes tamanhos de tela, proporcionando
 
 ## Como Executar o Projeto
 
-1 - Clone o repositório:
+1 - Clone o repositório
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
+Code
+
+git clone https://github.com/kscarby/ameliercrochet.git
 
 2 - Navegue até o diretório do projeto:
 
